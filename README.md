@@ -9,8 +9,8 @@
 * [Contact](#contact)
 
 ## General Information
-- Insight
-< / br>
+- Insight <br />
+
     For the present project, the requirements were to create a Docker image containing an index.html with a message, to furthermore upload it to dockerhub.com and display it using kubernetes and nginx.
 
 - How did we do proceed?
