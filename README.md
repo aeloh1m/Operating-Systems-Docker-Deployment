@@ -1,6 +1,6 @@
 # TP OS 2022
-> Deployement of a Docker image into
-> Shell log of the full process [_here_](https://github.com/aeloh1m/Trabajo-Pr-ctico-N-1-AySO/blob/master/TP_AySO/log.txt). <!-- If you have the project hosted somewhere, include the link here. -->
+> Deployement of a Docker image with kubernetes and nginx. <br />
+> Shell log of the full process [_here_](https://github.com/aeloh1m/Trabajo-Pr-ctico-N-1-AySO/blob/master/TP_AySO/log.txt).
 
 ## Table of Contents
 * [General Info](#general-information)
