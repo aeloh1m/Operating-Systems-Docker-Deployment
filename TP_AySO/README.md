@@ -1,1 +1,0 @@
--- Este es el README del grupo 1
