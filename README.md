@@ -9,16 +9,13 @@
 * [Contact](#contact)
 
 ## General Information
-Insight
-- 
+- Insight
     For the present project, the requirements were to create a Docker image containing an index.html with a message, to furthermore upload it to dockerhub.com and display it using kubernetes and nginx.
 
-How did we do proceed?
-- 
+- How did we do proceed?
     First of all, we've had to create a **k8s cluster** and a **docker image** with the tag "v1" containing an index.html with an H1 message, and inside the previous cluster, we made a **namespace** called "grupo1" where we deployed the previous Docker image, having 3 replica sets.
 
-What is the purpose of this project?
-- 
+- What is the purpose of this project?
     The purpose if this project is to show the process and files needed for such procedure, and to show what we achieved to our professors.
 
 
@@ -35,8 +32,7 @@ Project is: _complete_.
 
 
 ## Contact
-Created by: 
-- 
+- Created by: 
 
 Aelohim S. Graizzaro [@aeloh1m](https://github.com/aeloh1m) 
 Luciano Solari [@Lucianosolari](https://github.com/Lucianosolari) 
