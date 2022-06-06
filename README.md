@@ -12,7 +12,7 @@
 -  An insight: <br />
     - For the present project, the requirements were to create a Docker image containing an index.html with a message, to furthermore upload it to dockerhub.com and display it using kubernetes and nginx.
 
-- How did we do proceed? <br />
+- How did we proceeded? <br />
     - First of all, we've had to create a **k8s cluster** and a **docker image** with the tag "v1" containing an index.html with an H1 message, and inside the previous cluster, we made a **namespace** called "grupo1" where we deployed the previous Docker image, having 3 replica sets.
 
 - What is the purpose of this project? <br />
