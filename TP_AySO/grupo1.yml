@@ -14,8 +14,8 @@ spec:
                         labels:
                                 app: nginx
                 spec:
-                  containers:
-                  - name: nginx
-                    image: aelohim/v1:v1
-                    ports:
-                    - containerPort: 80
+                        containers:
+                                - name: nginx
+                                  image: aelohim/v1:v1
+                                  ports:
+                                          - containerPort: 80
