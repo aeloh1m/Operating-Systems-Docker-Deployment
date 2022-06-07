@@ -839,3 +839,165 @@ aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
 build.sh  Dockerfile  grupo1-pod.yml  grupo1.yml  index.html
 aelohim@aelohim-VirtualBox:~/TP_AySO$ less grupo1-pod.yml 
 aelohim@aelohim-VirtualBox:~/TP_AySO$ 
+
+
+
+--------- part 2 ----------
+
+
+aelohim@aelohim-VirtualBox:~$ ls
+dalepa     Documentos  gitpusheo  minikube-linux-amd64  Plantillas  TP_AySO
+Descargas  Escritorio  Imágenes   Música                Público     Vídeos
+aelohim@aelohim-VirtualBox:~$ cd TP_AySO/
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
+build.sh    grupo1-pod.yml  grupo1.yml.save  log.txt
+Dockerfile  grupo1.yml      index.html       README.md
+aelohim@aelohim-VirtualBox:~/TP_AySO$ nano grupo1.yml
+aelohim@aelohim-VirtualBox:~/TP_AySO$ nano grupo1.yml
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployements
+ 
+
+^C
+aelohim@aelohim-VirtualBox:~/TP_AySO$ minikube start
+😄  minikube v1.25.2 en Ubuntu 20.04
+✨  Using the docker driver based on existing profile
+👍  Starting control plane node minikube in cluster minikube
+🚜  Pulling base image ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparando Kubernetes v1.23.3 en Docker 20.10.12...
+    ▪ kubelet.housekeeping-interval=5m
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+    ▪ Using image kubernetesui/dashboard:v2.3.1
+    ▪ Using image kubernetesui/metrics-scraper:v1.0.7
+🌟  Complementos habilitados: default-storageclass, storage-provisioner, dashboard
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployements
+error: the server doesn't have a resource type "deployements"
+aelohim@aelohim-VirtualBox:~/TP_AySO$ nano grupo1.yml
+aelohim@aelohim-VirtualBox:~/TP_AySO$ docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED        SIZE
+aelohim/v1                    latest    6e5f30d34da8   6 days ago     5.59MB
+aelohim/v1                    v1        6e5f30d34da8   6 days ago     5.59MB
+v1                            latest    6e5f30d34da8   6 days ago     5.59MB
+v1                            v1        6e5f30d34da8   6 days ago     5.59MB
+v1                            veuno     6e5f30d34da8   6 days ago     5.59MB
+alpine                        3.14      e04c818066af   2 months ago   5.59MB
+gcr.io/k8s-minikube/kicbase   v0.0.30   1312ccd2422d   3 months ago   1.14GB
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
+build.sh    grupo1-pod.yml  grupo1.yml.save  log.txt
+Dockerfile  grupo1.yml      index.html       README.md
+aelohim@aelohim-VirtualBox:~/TP_AySO$ less Dockerfile 
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get namespaces
+NAME                   STATUS   AGE
+default                Active   13d
+kube-node-lease        Active   13d
+kube-public            Active   13d
+kube-system            Active   13d
+kubernetes-dashboard   Active   6d4h
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl config set-context --current --namespace=grupo1
+Context "minikube" modified.
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get namespaces
+NAME                   STATUS   AGE
+default                Active   13d
+kube-node-lease        Active   13d
+kube-public            Active   13d
+kube-system            Active   13d
+kubernetes-dashboard   Active   6d4h
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl create namespace grupo1
+namespace/grupo1 created
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get namespaces
+NAME                   STATUS   AGE
+default                Active   13d
+grupo1                 Active   2s
+kube-node-lease        Active   13d
+kube-public            Active   13d
+kube-system            Active   13d
+kubernetes-dashboard   Active   6d4h
+aelohim@aelohim-VirtualBox:~/TP_AySO$ nano grupo1.yml
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ~/.kube/config
+bash: /home/aelohim/.kube/config: Permiso denegado
+aelohim@aelohim-VirtualBox:~/TP_AySO$ sudo ~/.kube/config
+[sudo] contraseña para aelohim: 
+sudo: /home/aelohim/.kube/config: orden no encontrada
+aelohim@aelohim-VirtualBox:~/TP_AySO$ sudo su
+root@aelohim-VirtualBox:/home/aelohim/TP_AySO# ~/.kube/config
+bash: /root/.kube/config: No existe el archivo o el directorio
+root@aelohim-VirtualBox:/home/aelohim/TP_AySO# exit
+exit
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
+build.sh    grupo1-pod.yml  grupo1.yml.save  log.txt
+Dockerfile  grupo1.yml      index.html       README.md
+aelohim@aelohim-VirtualBox:~/TP_AySO$ cd ..
+aelohim@aelohim-VirtualBox:~$ ls
+dalepa     Documentos  gitpusheo  minikube-linux-amd64  Plantillas  TP_AySO
+Descargas  Escritorio  Imágenes   Música                Público     Vídeos
+aelohim@aelohim-VirtualBox:~$ mkdir TP_AYSO2
+aelohim@aelohim-VirtualBox:~$ cd TP_AYSO2/
+aelohim@aelohim-VirtualBox:~/TP_AYSO2$ ls
+aelohim@aelohim-VirtualBox:~/TP_AYSO2$ git clone https://github.com/aeloh1m/Trabajo-Pr-ctico-N-1-AySO
+Clonando en 'Trabajo-Pr-ctico-N-1-AySO'...
+remote: Enumerating objects: 58, done.
+remote: Counting objects: 100% (58/58), done.
+remote: Compressing objects: 100% (53/53), done.
+remote: Total 58 (delta 15), reused 14 (delta 1), pack-reused 0
+Desempaquetando objetos: 100% (58/58), 19.33 KiB | 682.00 KiB/s, listo.
+aelohim@aelohim-VirtualBox:~/TP_AYSO2$ ls
+Trabajo-Pr-ctico-N-1-AySO
+aelohim@aelohim-VirtualBox:~/TP_AYSO2$ cd Trabajo-Pr-ctico-N-1-AySO/
+aelohim@aelohim-VirtualBox:~/TP_AYSO2/Trabajo-Pr-ctico-N-1-AySO$ ls
+README.md  TP_AySO
+aelohim@aelohim-VirtualBox:~/TP_AYSO2/Trabajo-Pr-ctico-N-1-AySO$ cd TP_AySO/
+aelohim@aelohim-VirtualBox:~/TP_AYSO2/Trabajo-Pr-ctico-N-1-AySO/TP_AySO$ cd ..
+aelohim@aelohim-VirtualBox:~/TP_AYSO2/Trabajo-Pr-ctico-N-1-AySO$ cd ..
+aelohim@aelohim-VirtualBox:~/TP_AYSO2$ cd ..
+aelohim@aelohim-VirtualBox:~$ ls
+dalepa      Escritorio  minikube-linux-amd64  Público   Vídeos
+Descargas   gitpusheo   Música                TP_AySO
+Documentos  Imágenes    Plantillas            TP_AYSO2
+aelohim@aelohim-VirtualBox:~$ cd TP_Ay
+bash: cd: TP_Ay: No existe el archivo o el directorio
+aelohim@aelohim-VirtualBox:~$ cd TP_AySO/
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
+build.sh    grupo1-pod.yml  grupo1.yml.save  log.txt
+Dockerfile  grupo1.yml      index.html       README.md
+aelohim@aelohim-VirtualBox:~/TP_AySO$ cp grupo1.yml /home/aelohim/TP_AYSO2/Trabajo-Pr-ctico-N-1-AySO/TP_AySO
+aelohim@aelohim-VirtualBox:~/TP_AySO$ ls
+build.sh    grupo1-pod.yml  grupo1.yml.save  log.txt
+Dockerfile  grupo1.yml      index.html       README.md
+aelohim@aelohim-VirtualBox:~/TP_AySO$ pwd
+/home/aelohim/TP_AySO
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl apply -f /home/aelohim/TP_AySO/grupo1.yml -n grupo1
+deployment.apps/nginx-deployment created
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployements
+error: the server doesn't have a resource type "deployements"
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployement
+error: the server doesn't have a resource type "deployement"
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get events --watch in deployement
+Error from server (NotFound): events "in" not found
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   0/3     3            0           2m14s
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get namespaces
+NAME                   STATUS   AGE
+default                Active   13d
+grupo1                 Active   16m
+kube-node-lease        Active   13d
+kube-public            Active   13d
+kube-system            Active   13d
+kubernetes-dashboard   Active   6d4h
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get rs
+NAME                          DESIRED   CURRENT   READY   AGE
+nginx-deployment-7c7459cd49   3         3         0       5m42s
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get deployments
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment   0/3     3            0           6m33s
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl port-forward nginx-deployment 28015:27017
+Error from server (NotFound): pods "nginx-deployment" not found
+aelohim@aelohim-VirtualBox:~/TP_AySO$ kubectl get pods
+NAME                                READY   STATUS             RESTARTS      AGE
+nginx-deployment-7c7459cd49-bzlxt   0/1     CrashLoopBackOff   6 (92s ago)   7m27s
+nginx-deployment-7c7459cd49-p6ll6   0/1     CrashLoopBackOff   6 (71s ago)   7m27s
+nginx-deployment-7c7459cd49-tg5kq   0/1     CrashLoopBackOff   6 (95s ago)   7m27s
+aelohim@aelohim-VirtualBox:~/TP_AySO$ 
+

@@ -1,2 +1,2 @@
-FROM alpine:3.14
-COPY index.html /usr/share/nginx/html
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
