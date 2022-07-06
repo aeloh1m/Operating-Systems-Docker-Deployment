@@ -19,7 +19,7 @@
     - The purpose of this project is to show the process and files needed for such procedure, and to show what we achieved to our professors.
     
 ## Demo of the deployment process
-(https://youtu.be/DA_pYIHcqLc)
+[![Deployment of containerized app with k8s]](https://youtu.be/DA_pYIHcqLc)
 
 
 ## Technologies Used
