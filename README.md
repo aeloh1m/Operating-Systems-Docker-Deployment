@@ -3,6 +3,7 @@
 
 ## Table of Contents
 * [General Info](#general-information)
+* [Watch a demo of the deployment !](#demo-of-the-deployment-process)
 * [Technologies Used](#technologies-used)
 * [Project Status](#project-status)
 * [Contact](#contact)
@@ -16,6 +17,9 @@
 
 - What is the purpose of this project? <br />
     - The purpose of this project is to show the process and files needed for such procedure, and to show what we achieved to our professors.
+    
+## Demo of the deployment process
+(https://youtu.be/DA_pYIHcqLc)
 
 
 ## Technologies Used
